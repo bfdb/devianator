@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+
+<head>
+    <!-- Title -->
+    <title></title>
+
+    <!-- Defining meta variables -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Loading jQuery and D3 stuff -->
+    <link rel="stylesheet" href="css/styletest.css">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+    <!-- Loading document styling files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+</head>
+
+
+<body>
+<!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+
+<div id="splash" class="container-outer">
+  <div class="container">
+    <h1><img src="devianator_logo.png" width="38%"></h1>
+    <div id="banner_title">
+
+    </div>
+    <div id="banner_icons">
+
+    </div>
+  </div>
+</div>
+
+
+<div id="survey" class="container-outer">
+  <div class="container">
+    <div class="table-outer">
+      <div class="table-middle">
+        <div class="table-inner">
+            <div id="sliders">
+
+                <h5>TELL US ABOUT YOURSELF</h5>
+
+                <hr>
+
+                <div id="choosingcountry">
+                  <p class="slidersquestions">Where do you live?</p>
+                  <div id="countrySelector"></div>
+                </div>
+
+                <div class="sliders">
+                      <div class="sliderlabelleft"><p class="slidersquestions">How many sex partners have you had so far?</p></div>
+                      <div class="sliderlabelright" ><p class="slidersquestions"><div id="7label">0</div></p></div><br>
+                      <div id=7 class="slider"></div>
+                </div>
+
+                <div class="sliders">
+                    <div id="sliderslabels">
+                       <div class="sliderlabelleft"><p class="slidersquestions">How would you rate your overall life satisfaction?</p></div>
+                       <div class="sliderlabelright" ><p class="slidersquestions"><div id="8label">0</div></p></div><br>
+                    </div>
+                      <div id=8 class="slider"></div>
+                </div>
+
+                <div class="sliders">
+                      <div class="sliderlabelleft"><p class="slidersquestions">How many hours per month do you spend online?</p></div>
+                      <div class="sliderlabelright" ><p class="slidersquestions"><div id="9label">0</div></p></div><br>
+                      <div id=9 class="slider"></div>
+                </div class="sliders">
+
+                <div class="sliders">
+                      <div class="sliderlabelleft"><p class="slidersquestions">How many alcoholic drinks do you consume per week?</p></div>
+                      <div class="sliderlabelright" ><p class="slidersquestions"><div id="10label">0</div></p></div><br>
+                      <div id=10 class="slider"></div>
+                </div>
+
+                <div id="buttonreset" style="padding-top:10px; float:right;"></div>
+
+            </div>
+
+          </div>
+
+
+            <div id="chartscontainter">
+              <h5>YOUR DEVIANCE BREAKDOWN</h5>
+              <hr>
+              <div id="charts"></div>
+                <div id="labelscontainer">
+                    <div class="chartlabel" ><p class="labelscontainter">Sex</p></div>
+                    <div class="chartlabel" ><p class="labelscontainter">Life</p></div>
+                    <div class="chartlabel" ><p class="labelscontainter" >Internet</p></div>
+                    <div class="chartlabel" ><p class="labelscontainter" style="margin-left:19px;">Alcohol</p></div>
+                </div>
+            </div>
+
+            <div id="containsfacecontainer">
+              <div id="checkboxcontainer">
+                <h5>TELL US A LITTLE MORE</h5>
+                <hr>
+                <div id="checkboxes">
+
+                    <div class="checkboxboite" >
+                      <div class="checkboxtext" >
+                        <p class="slidersquestions">Do you own any pets?</p>
+                      </div>
+                      <div class="boite" >
+                        <input id=3 type="checkbox" class="checkbox">
+                      </div>
+                    </div>
+
+                    <div class="checkboxboite" >
+                      <div class="checkboxtext" >
+                        <p class="slidersquestions">Do you smoke?</p>
+                      </div>
+                      <div class="boite" >
+                        <input id=4 type="checkbox" class="checkbox">
+                      </div>
+                    </div>
+
+                    <div class="checkboxboite" >
+                      <div class="checkboxtext" >
+                        <p class="slidersquestions">Have you ever used marijuana?</p>
+                      </div>
+                      <div class="boite" >
+                        <input id=5 type="checkbox" class="checkbox">
+                      </div>
+                    </div>
+
+                    <div class="checkboxboite" >
+                      <div class="checkboxtext" >
+                        <p class="slidersquestions">Have you ever used hard drugs?</p>
+                      </div>
+                      <div class="boite" >
+                        <input id=6 type="checkbox" class="checkbox">
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div id="clearer" />
+
+            <div id="mapline">
+
+                     <div id="mappluslegend">
+                       <h5>PLANNING TO MOVE?</h5>
+                       <hr>
+                       <div id="aroundmap">
+
+                       <br>
+                         <div id="map"></div>
+                       </div>
+                       <div id="legend">
+                         <p>This bubble chart reveals how you deviate from the overall averages in other countries: The bigger a circle in the visualisation is, the closer you are to the average of that country. Your selected country is highlighted in white.</p>
+
+
+
+                         <div id="mapkey">
+                           <div class="mapkeyitem">
+                             <div class="mapkeyitemIcon">
+                               <svg width="15" height="15"><circle cx="7" cy="7" r="6" stroke="white"     stroke-width="2" fill="#e0e4cc"/></svg>
+                             </div>
+                             <div class="mapkeyitemText">
+                               <p>EUROPE</p>
+                             </div>
+                           </div>
+
+                           <div class="mapkeyitem">
+                             <div class="mapkeyitemIcon">
+                               <svg width="15" height="15"><circle cx="7" cy="7" r="6" stroke="white"     stroke-width="2" fill="#a7dbd8"/></svg>
+                             </div>
+                             <div class="mapkeyitemText">
+                               <p>NORTH AMERICA</p>
+                             </div>
+                           </div>
+
+                           <div class="mapkeyitem">
+                             <div class="mapkeyitemIcon">
+                               <svg width="15" height="15"><circle cx="7" cy="7" r="6" stroke="white"     stroke-width="2" fill="#ec5f38"/></svg>
+                             </div>
+                             <div class="mapkeyitemText">
+                               <p>SOUTH AMERICA</p>
+                             </div>
+                           </div>
+
+                           <div class="mapkeyitem">
+                             <div class="mapkeyitemIcon">
+                               <svg width="15" height="15"><circle cx="7" cy="7" r="6" stroke="white"     stroke-width="2" fill="#fbe9b0"/></svg>
+                             </div>
+                             <div class="mapkeyitemText">
+                               <p>ASIA</p>
+                             </div>
+                           </div>
+
+                           <div class="mapkeyitem">
+                             <div class="mapkeyitemIcon">
+                               <svg width="15" height="15"><circle cx="7" cy="7" r="6" stroke="white"     stroke-width="2" fill="#46d3ec"/></svg>
+                             </div>
+                             <div class="mapkeyitemText">
+                               <p>AFRICA</p>
+                             </div>
+                           </div>
+
+                           <div class="mapkeyitem" style="clear:both">
+                             <div class="mapkeyitemIcon" style="float:left">
+                               <svg width="15" height="15"><circle cx="7" cy="7" r="6" stroke="white"     stroke-width="2" fill="#f38630"/></svg>
+                             </div>
+                             <div class="mapkeyitemText">
+                               <p>OCEANIA</p>
+                             </div>
+                           </div>
+
+                         </div>
+                       </div>
+                      </div>
+
+                  <div id="containerfacecontainer">
+                    <h5>YOUR OVERALL DEVIANCE:</h5>
+                    <hr>
+                      <div id="facecontainer">
+                        <br>
+                          <div id="face">0%</div>
+                          <br>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-outer">
+  <div class="container">
+    <div class="row">
+      <div class="span2">
+        <ul class="unstyled">
+          <li><strong>About</strong></li>
+          <li><a href="#modal" data-toggle="modal" data-modal-content="about-project">The Project</a></li>
+          <li><a href="#modal" data-toggle="modal" data-modal-content="about-us">Us</a></li>
+        </ul>
+      </div>
+
+      <div class="span1">
+        <ul class="unstyled">
+          <li><strong>Data</strong></li>
+          <li><a href="#modal" data-toggle="modal" data-modal-content="data-sets">Sets</a></li>
+          <li><a href="#modal" data-toggle="modal" data-modal-content="data-sources">Sources</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+<div id="modal" class="modal hide fade">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <div class="modal-content about-project">
+      <h3>About The Project</h3>
+    </div>
+    <div class="modal-content about-us">
+      <h3>About Us</h3>
+    </div>
+    <div class="modal-content data-sets">
+      <h3>Datasets</h3>
+    </div>
+    <div class="modal-content data-sources">
+      <h3>Data Sources</h3>
+    </div>
+  </div>
+  <div class="modal-body">
+    <div class="modal-content about-project">
+      <p><span style="font-size:18pt; font-family:Times, serif; font-weight:bold;">deviant, n.</span>
+      <p><span style="font-size:14pt; font-family:Times, serif;"><i>A person who, or thing which, deviates; esp. one who deviates from normal social, etc., standards or behaviour</i></span></p>
+      <hr>
+      <p><strong>Devianator</strong> is a small project created to illustrate deviance as it relates to lifestyle habits. It enables users to approximate their overall deviance, both within the borders of their own country and by comparison to other countries.</p>
+
+      <p>The project gives a nod to the complications inherent in statistical averaging, and thus addresses a century-old core question of sociological research: How do aggregated, statistical data such as averages relate to the individual? And how much, or indeed how little, can we learn about the individuals of a society by merely looking at statistics? Without claiming scientific accuracy, Devianator aims to show that &mdash; statistically &mdash; everyone is deviant, and seeks to make this deviance visible in order to allay the anxieties associated with not fitting in.</p>
+
+      <p><strong>Devianator</strong> was developed in February and March 2013 as part of a data visualisation course at the University of Amsterdam, Netherlands. It is a collaboration of graduate students in New Media and Digital Culture as well as Artificial Intelligence. For more projects from the course, see: <a href="http://showmethedata.nl/2012/2013-2/" target="_blank">www.showmethedata.nl</a>.</p>
+    </div>
+    <div class="modal-content about-us">
+      <p><strong>Bertram de Boer</strong> was born in France and now lives in the Netherlands. His favorite childhood band was the Pet Shop Boys, and recently he has added Krav Maga to his long list of hobbies.</p>
+
+      <p><strong>Thomas Jongstra</strong> is from Amsterdam. He enjoys playing ultimate frisbee, has two moms, and has been addicted to Marmite since the age of 3.</p>
+
+      <p><strong>Jules Mataly</strong> comes from the place famous for its smelly cheese (France), likes Reddit and bikes way too much. He is very particular about coffee standards. A master of squash and wheelies.</p>
+
+      <p><strong>Maya Livio</strong> was born and raised in Tel Aviv and later moved to Baltimore. She likes contemporary art, intimacy, and observing the birds in Amsterdam (especially the Egyptian Geese and Magpies). Some may describe her as a cat lady, but she would not.</p>
+
+      <p><strong>Mathias Schuh</strong> comes from Vienna, Austria. Beyond spending unhealthily long hours on the Internet, he has been known for obsessively appreciating the aesthetics of trees. </p>
+
+    </div>
+    <div class="modal-content data-sets">
+      <p>To review or use our data sets, feel free to download them in <a href="/devianator/download/Devianator_Dataset.pdf" target="_blank">PDF</a> or <a href="/devianator/download/Devianator_Dataset.xlsx" target="_blank">Excel</a> formats.</p>
+    </div>
+    <div class="modal-content data-sources">
+      <p>The database for this project contains eight different data sets for about forty countries. The selection of countries was determined by the the availability of data sources. Due to these limitations, the country list consists of the majority of <a target="_blank" href="http://www.oecd.org/general/listofoecdmembercountries-ratificationoftheconventionontheoecd.htm">OECD Member States</a> as well as Brazil, China, India, and South Africa.</p>
+
+      <h4>Alcohol Consumption</h4>
+      <p>Data for alcohol consumption per capita was taken from the OECD database on health indicators, which can be accessed <a target="_blank" href="http://www.oecd.org/els/health-systems/oecdhealthdata2012-frequentlyrequesteddata.htm">here</a>. The data set contains the average annual consumption of pure alcohol per person (15+) and was converted from liters per year into drinks per week, using the conversion ratio suggested by the <a target="_blank" href="http://www.cdc.gov/alcohol/faqs.htm#standDrink">US Centre for Disease Control</a>. One standard drink contains approximately 18 ml of pure alcohol, the amount found in one glass of beer (350ml) or wine (150ml) or a liquor shot (4cl). </p>
+
+      <h4>Drug Use</h4>
+      <p>The 2012 edition of the annual <a target="_blank" href="https://www.unodc.org/unodc/en/data-and-analysis/WDR-2012.html">World Drug Report</a> by UNODC, the United Nations Office on Drugs and Crime, was the basis for the data on illicit drug usage. It contains estimates for both the use of cannabis and hard drugs such as cocaine, amphetamines and opioids. The complete data source can be downloaded <a target="_blank" href="https://www.unodc.org/documents/data-and-analysis/statistics/WDR2012/Prev_All_2012.xls">here</a> (in XLS format). </p>
+
+      <h4>Internet Usage</h4>
+      <p>The main source for monthly internet usage per capita was <a target="_blank" href="http://www.comscore.com/">comScore</a>, a web analytics company measuring digital media usage and publishing the results in the form of periodical country reports. Missing data was completed with statistics from <a target="_blank" href="http://gemius.com/">Gemius</a>, a comScore competitor in audience measurement active in Eastern Europe, and additional sources. </p>
+
+      <h4>Life Satisfaction</h4>
+      <p>Data on general life satisfaction stems from the <a target="_blank" href="http://www.oecdbetterlifeindex.org/">OECD Better Life Index 2010</a>. The survey asked participants across the <a target="_blank" href="http://www.oecd.org/general/listofoecdmembercountries-ratificationoftheconventionontheoecd.htm">OECD Member States</a> and <a target="_blank" href="https://en.wikipedia.org/wiki/BRICS">BRICS</a> countries to assess their overall wellbeing on a scale from 1 (low) to 10 (high). More information about the survey can be found <a target="_blank" href="http://www.oecdbetterlifeindex.org/topics/life-satisfaction/">here</a>. </p>
+
+      <h4>Pet Ownership</h4>
+      <p>Data for pet ownership is based on a survey by the <a target="_blank" href="http://www.wspa-international.org/">World Society for the Protection of Animals (WSPA)</a>, published in a 2008 report available for download <a target="_blank" href="http://www.wspa.org.uk/Images/Pet%20ownership%20and%20trade%20-%20Global%20report_tcm9-10875.pdf">here</a> (PDF, 2.4MB). The total pet population number was divided into pets per household using census information provided by the <a target="_blank" href="http://unstats.un.org/unsd/default.htm">United Nations Statistics Division</a>. </p>
+
+      <h4>Sex Partners</h4>
+      <p>The main data source for the number of sex partners per person is the <a target="_blank" href="http://www.durex.com/en-gb/aboutdurex/global%20research/pages/default.aspx">Durex</a> Global Sex Survey from 2005, containing data from 41 countries and 317,000 respondents, making it the largest survey on sexual activity at the time of research. The report is available for download <a target="_blank" href="http://www.durex.com/en-jp/sexualwellbeingsurvey/documents/gss2005result.pdf">here</a> (PDF, 1MB). Missing data was completed with data from more the preceding 2004 report, also carried out by Durex. </p>
+
+      <h4>Smoking</h4>
+      <p>Data for the prevalence of tobacco consumption among the general population was taken from the database of the <a target="_blank" href="http://www.who.int/en/">World Health Organisation</a> (WHO). The full dataset can be accessed <a target="_blank" href="http://www.who.int/gho/tobacco/use/en/">here</a>. </p>
+
+
+    </div>
+  </div>
+</div>
+
+<div id="menu" data-slide="up">
+  <div id="menu-content">
+    <p><strong>Devianator</strong> enables you to find out how much your lifestyle deviates from the averages in your country in eight different categories: alcohol consumption, tobacco, cannabis and hard drug consumption, number of sex partners, internet usage, overall life satisfaction, and pet ownership.</p>
+
+    <strong>How deviant are you in your country?</strong><br> Begin by selecting your country from the drop-down menu and answer the questions using the sliders and checkboxes on the left side. The bar chart will show you how much you deviate from the average in your country for each category, and the box will reveal your overall deviance.</p>
+
+    <strong>Want to move to a country where you might fit in better?</strong><br> The bubble chart below will illustrate how you deviate from the overall averages in other countries: the bigger a circle in the visualisation is, the closer you are to the average of that country, and vice versa.</p>
+
+    <strong>Is your country not in the list?</strong><br> Sorry about that. Due to the limited availability of data, we had to reduce our list to the approximately forty countries for which data was obtainable. </p>
+
+  </div>
+  <div id="handle"><img src="img/question-mark.png"></div>
+</div>
+
+
+
+<script>
+
+
+////////////////////////////////////////////////////////////////////////////////
+// INITIALIZATION //////////////////////////////////////////////////////////////
+
+// Define a default user country
+var defaultCountry  = "Netherlands"; // default user country
+
+// Initialize global dynamic data elements
+var rawData             = [];  // raw csv data
+var allCountries        = [];  // array for all country names
+var countryData         = [];  // default data for the current country (now: default data for Netherlands)
+var userData            = [];  // default data for user input (now: default data for Netherlands)
+var parsedData          = [];  // similarity values of user for every variable compared to every country
+var parsedCountryData   = [];  // parsed data for the current country
+var mapData             = [];  // data used to draw the map
+var keyData             = [];  // results to display as key for map
+
+
+// Initialize global static variables
+var minData             = [];   // minimum possible values in dataset
+var maxData             = [];   // maximum possible values in dataset
+var height              = 300;  // default height of a bar in chart
+var mapScale            = 1;   // default scaling of the map
+var boxStart            = 3;    // Arrays 3 to 7 are used to create checkboxes
+var sliderStart         = 7;    // Arrays 7 to 11 are used to create sliders
+var boxIndexes          = [];   // The indexes of checkbox elements
+var sliderIndexes       = [];   // The indexes of the slider elements
+var varPercentage       = 1/8;  // Percentage of influence for every variable
+var scales              = [];   // Array for scaling objects, contains [minScale , maxScale]
+                                // for every variable for every country
+
+var powScale            = d3.scale.pow()        // power scaling for bubbles
+                            .exponent(10)
+                            .domain([0,100])
+                            .range([0,100]);
+
+var colors              = ["#f38630", "#e0e4cc", "#ec5f38", "#a7dbd8", "#fbe9b0", "#46d3ec"]; // Colors for colorScheme
+
+var colorScheme         = d3.scale.ordinal()    // Color scheme used for rendering Bubble map
+                            .range(colors)
+
+// Create selection objects for all dynamically changing divs
+var bodyDiv             = d3.select("body").selectAll("p");
+var countrySelector     = d3.select("#countrySelector");
+var boxesDiv            = d3.select("#checkboxes");
+var slidersDiv          = d3.select("#sliders");
+var chartsDiv           = d3.select("#charts");
+var resetDiv            = d3.select("#buttonreset");
+var faceDiv             = d3.select("#face");
+var mapDiv              = d3.select("#map");
+var keyDiv              = d3.select("#key");
+
+// Load the country data from the csv into our rawData variable
+//d3.csv("http://www.mathiasschuh.com/devianator2/final_dataset.csv", function(rows) {
+d3.csv("final_dataset.csv", function(rows) {
+    rows.forEach(function(row) {
+
+        // Fill the rawData and allCountries with their respective values
+        rawData.push(row);
+        allCountries.push(row.Country);
+
+        // Fill default user data with average data for the default country
+        if (row.Country == defaultCountry) {
+            for (variable in row) {
+                countryData.push([variable, row[variable]]);
+                userData.push([variable, row[variable], true]);
+            }
+        }
+
+        // Fill minData with the minimal data for every variable
+        if (row.Country == "MinValue") {
+            for (variable in row) {
+                minData.push([variable, row[variable]]);
+            }
+        }
+
+        // Fill maxData with the maximal data for every variable
+        if (row.Country == "MaxValue") {
+            for (variable in row) {
+                maxData.push([variable, row[variable]]);
+            }
+        }
+    });
+
+    // Start main program loop
+    mainLoop();
+
+});
+
+////////////////////////////////////////////////////////////////////////////////
+// SLIDERS CODE ////////////////////////////////////////////////////////////////
+
+function mainLoop() {
+
+    // Calculate the offsetted indexes for the checkboxes
+    for (var i=0; i<(countryData.slice(boxStart, sliderStart).length); i++) {
+        var fixedIndex = parseInt(i) + boxStart;
+        boxIndexes.push(fixedIndex);
+    }
+
+    // Calculate the offsetted indexes for the sliders
+    for (var i=0; i<(countryData.slice(sliderStart).length); i++) {
+        var fixedIndex = parseInt(i) + sliderStart;
+        sliderIndexes.push(fixedIndex);
+    }
+
+
+    // Pre-calculate scalings for every country
+    for (var i=0; i<rawData.length; i++) {
+
+        // Skip minValues and maxValues "countries"
+        if (i>=2) {
+            var currentCountry = rawData[i];
+
+            // Initialize country scales
+            scales[i] = [];
+
+            // Loop over all variables
+            for (var j=2; j<userData.length; j++) {
+
+                // Get the name of the current variable
+                var variableName = userData[j][0];
+
+
+                // Skip first two variables (country name and continent). For other variables, calculate // the scales.
+                if (j>=2) {
+
+                    // Initialize variable scales for this country
+                    scales[i][j] = [];
+
+                    // Get values
+                    var countryVal = parseFloat(currentCountry[variableName]);
+                    var minVal = parseFloat(minData[j][1]);
+                    var maxVal = parseFloat(maxData[j][1]);
+
+                    // Calculate minScale
+                    var minScale = d3.scale.linear()
+                                           .nice()
+                                           .domain([countryVal, minVal])
+                                           .range([0, 100]);
+
+                    // Calculate maxScale
+                    var maxScale = d3.scale.linear()
+                                           .nice()
+                                           .domain([countryVal, maxVal])
+                                           .range([0, 100]);
+
+                    scales[i][j][0] = minScale;
+                    scales[i][j][1] = maxScale;
+                }
+            }
+        }
+    }
+
+    // Create the country selection combobox
+    var selectorCreated = $.when(createSelector());
+    function createSelector() {
+        countrySelector.append("div")
+                       .append("select")
+                       .attr("id", "countrySelection")
+                       .on("change", function() {updateCountryData(document.getElementById("countrySelection").value)} )
+                       .selectAll("option")
+                       .data(allCountries.slice(2))
+                       .enter()
+                       .append("option")
+                       .attr("value", function(countryName) {return countryName;})
+                       .text(function(countryName) {return countryName;});
+
+        // Select the default country
+        //countrySelection.value = countryData[0][1];
+    }
+
+    // Update parsedCountryData for the current country
+    function updateCountryData(newCountry) {
+        countryIndex = -1;
+        for (var i=2; i<allCountries.length; i++) {
+            if (newCountry == allCountries[i]) {
+                countryIndex = i;
+            }
+        }
+
+        // Set countryData to the data of the selected country
+        countryData = [];
+        for (i in rawData) {
+            country = rawData[i];
+            if (country["Country"] == newCountry) {
+                for (variable in country) {
+                    countryData.push([variable, country[variable]]);
+                }
+            }
+        }
+
+        // Set the parsedCountryData to the selected country
+        parsedCountryData = parsedData[countryIndex];
+
+        // Redraw charts and map for this new country
+        redraw();
+    }
+
+
+    // Create checkboxes in the sliders div
+    var boxesCreated = $.when(selectorCreated).then(createBoxes());
+    function createBoxes() {
+        boxesDiv.selectAll("div")
+                .data(boxIndexes)
+                .enter()
+                .append("div")
+                .append("input")
+                .attr("type", "checkbox")
+                .attr("class", "checkbox")
+                .attr("id", function(d) {return d.toString();});
+    }
+
+
+    // Create the sliders in the sliders div
+    var slidersCreated = $.when(boxesCreated).then(createSliders());
+    function createSliders() {
+        slidersDiv.selectAll("div")
+                  .data(sliderIndexes)
+                  .enter()
+                  .append("div")
+                  .attr("class", "slider")
+                  .attr("id", function(d) {return d.toString();});
+    }
+
+
+    // Create reset button
+    resetDiv.append("button")
+           .attr("class", "resetButton")
+           .text("Reset")
+           .on("click", function() {reset();} )
+
+    // Reset the user values to the country values.
+    function reset() {
+        for (var i=0; i<countryData.length; i++) {
+            userData[i] = [ countryData[i][0], countryData[i][1], userData[i][2] ];
+
+        };
+
+
+        // Set the sliders (and the boxes next to them) to the new country values
+        for (var i=0; i<sliderIndexes.length; i++) {
+
+            // Set the sliders
+            var index = sliderIndexes[i];
+            var sliderID = "#" + index.toString();
+            $(sliderID).slider("option", "value", parseFloat(countryData[index][1]) );
+
+            // Set the values of the boxes next to the sliders
+            var labelID = sliderID + "label";
+            if ($(index).attr('id')=="8") {
+                $(labelID).html(countryData[index][1]);
+            } else {
+                $(labelID).html(Math.round(countryData[index][1]));
+            }
+        }
+
+        // Set the checkboxes to the new country values
+        for (var j=0; j<boxIndexes.length; j++) {
+            var index = boxIndexes[j];
+            var boxID = "#" + index.toString();
+            if (parseFloat(countryData[index][1]) > 0.5) {
+                $(boxID).prop("checked", true);
+                userData[index][1] = 1;  // make user data compliant to checkbox value
+            }
+            else {
+                $(boxID).prop("checked", false);
+                userData[index][1] = 0;  // make user data compliant to checkbox value
+            }
+        }
+
+        // Parse the data again and redraw the charts and bubble map.
+        parseData();
+        redraw();
+    };
+
+
+    // Start country selection combobox, checkboxes, and sliders
+    var elementsStarted = $.when(slidersCreated).then(startElements());
+    function startElements() {
+
+        // Start checkboxes functionality
+        $(function () {
+            $( ".checkbox" ).button();
+        });
+
+        $(".checkbox").click( function() {
+            if ($(this).prop('checked')) {
+                // Update user data based on cbeckbox value
+                userData[$(this).attr('id')][1] = 1;
+            }
+            else {
+                // Update user data based on cbeckbox value
+                userData[$(this).attr('id')][1] = 0;
+            }
+
+            // update the parsedData when userData has been changed.
+            parseData();
+            redraw();
+        });
+
+
+        // Start sliders functionality
+        $(function () {
+            $( ".slider" ).slider(
+                { animate: "slow"},
+                { step: 0.1},
+                { slide: function( event, ui ) {
+
+                    // Update user data based on slider value
+                    userData[$(this).attr('id')][1] = ui.value;
+
+                    // Update the box showing the slider value
+                    if ($(this).attr('id')=="8") {
+                        $("#"+$(this).attr('id')+"label").html(ui.value);
+                    } else {
+                        $("#"+$(this).attr('id')+"label").html(Math.round(ui.value));
+                    }
+                    // update the parsedData when userData has been changed.
+                    parseData();
+
+                    // Redraw #charts, #face and #map divs
+                    redraw();
+                  }
+                }
+            );
+        });
+    };
+
+
+
+
+    $.when(elementsStarted).then(function() {
+        $(document).ready(function() {
+            // Initializing the "max", "min" and "value" values of the sliders
+            for (var i=0;  i<sliderIndexes.length; i++) {
+                var index = sliderIndexes[i];
+                var sliderID = "#" + index.toString();
+                $(sliderID).slider("option",    {min:    parseFloat(minData[index][1]),
+                                                 max:    parseFloat(maxData[index][1]),
+                                                 value:  parseFloat(countryData[index][1])
+                                                });
+                $(sliderID+"label").html(Math.round(parseFloat(countryData[index][1])));
+            }
+            // Setting the default values for the checkboxes
+            for (var j=0; j<boxIndexes.length; j++) {
+                var index = boxIndexes[j];
+                var boxID = "#" + index.toString();
+                if (parseFloat(countryData[index][1]) > 0.5) {
+                    $(boxID).prop("checked", true);
+                    userData[index][1] = 1;  // make user data compliant to checkbox value
+                }
+                else {
+                    $(boxID).prop("checked", false);
+                    userData[index][1] = 0;  // make user data compliant to checkbox value
+                }
+            }
+            // Parse userdata after setting the initial values
+            parseData();
+            redraw()
+        });
+    });
+
+
+    // Update the parsedData based on values in userData
+    function parseData() {
+
+        // Loop over all counties in the raw data
+        for (var k=2; k<rawData.length; k++) {
+            var countryDeviance = 0;
+            var countryObject = rawData[k];
+            parsedData[k] = []; // Create a new array in parsedData for every country
+            parsedData[k].push(countryObject.Country); // Add the country name as the first value in array
+            parsedData[k].push(countryObject.Continent); // Add continent as the second value in array
+
+            // Parse userData checkbox values
+            for (var m=0; m<boxIndexes.length; m++) {
+                var index = parseInt(boxIndexes[m]);
+                var boxVariable = userData[index][0];                       // Name of variable
+                var userValue = parseInt(userData[index][1]);               // User value for variable
+                var countryValue = parseFloat(countryObject[boxVariable]);  // Country value for variable
+
+                // Update the countryDeviance value based on the checkbox setting
+                if (userValue == 1) {
+                    if (countryValue < 0.5) {
+                        countryDeviance += ((1 - countryValue) * varPercentage) * 100;
+                    }
+                }
+                else {
+                    if (countryValue > 0.5) {
+                        countryDeviance += (countryValue * varPercentage) * 100;
+                    }
+                }
+
+            }
+
+            // Parse userData slider values: - add them to parsedData for the current country
+            //                               - use them to update the countryDeviance value
+            for (var n=0; n<sliderIndexes.length; n++) {
+                var index = parseInt(sliderIndexes[n]);
+                var sliderVariable = userData[index][0];                        // Name of variable
+                var userValue = parseFloat(userData[index][1]);                 // User value for variable
+                var countryValue = parseFloat(countryObject[sliderVariable]);   // Country value for variable
+
+                // Initial value
+                scaledValue = 0;
+
+                // Calculate scaled values
+                if (userValue < countryValue) {
+                    // Use min scale
+                    minScale = scales[k][index][0];
+                    scaledValue = minScale(userValue);
+                }
+                else {
+                    // Use max scale
+                    maxScale = scales[k][index][1];
+                    scaledValue = maxScale(userValue);
+                }
+
+                parsedData[k].push(scaledValue);
+                countryDeviance += (scaledValue * varPercentage);
+            }
+
+            // Finally, add the overall country deviance value to the array of the current country
+            parsedData[k].push(countryDeviance);
+
+
+            // Update the parsedCountryData to the data of the current country
+            if (countryObject.Country == countryData[0][1]) {
+                parsedCountryData = parsedData[k];
+
+                // Select the default country after its parsed data is available
+                countrySelection.value = countryData[0][1];
+            }
+
+        }
+
+        // Update the mapData
+        mapData = [[]]
+        temp = [];
+        for (var k=2; k < parsedData.length; k++) {
+            temp.push({className: parsedData[k][0], packageName: parsedData[k][1], similarity: (100 - parsedData[k][6]), value: powScale(100 - parsedData[k][6]) });
+        }
+        mapData = {children: temp};
+
+    }
+
+
+
+    ////////////////////////////////////////////////////////////////////////////
+    // MAP STUFF ///////////////////////////////////////////////////////////////
+
+    // Comparator for ordering country circles
+    function comparator(a, b) {
+      return b.value - a.value;
+    }
+
+    // Update the map
+    function updateMap() {
+        
+        // Define bubble chart size
+        var diameter = 500,
+            format = d3.format(",d");
+
+        // Create a variable for layout pack
+        var bubble = d3.layout.pack()
+            .sort(comparator)
+            .size([diameter, diameter])
+            .padding(1.5);
+        mapDiv.select("svg").remove();
+
+        // Append SVG to the mapDiv and set its attributes
+        var svg = mapDiv.append("svg")
+            .attr("width", diameter)
+            .attr("height", diameter)
+            .attr("class", "bubble");
+
+        // Bind data to node selection within the SVG
+        var node = svg.selectAll(".node")
+            .data(bubble.nodes(mapData)
+            .filter(function(d) { return !d.children; }))
+
+        // Append node for every country entry
+        .enter().append("g")
+            .attr("class", "node")
+            .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+        // Set title for node
+        node.append("title")
+            .text(function(d) { return d.className + ": " + format(Math.round(d.similarity)); });
+
+        // Create circle object. Use different stroke and stroke width for the currently selected country.
+        node.append("circle")
+            .attr("r", function(d) { return d.r; })
+            .style("fill", function(d) { return colorScheme(d.packageName); })
+            .style("stroke", function(d) { if (d.className === countryData[0][1]) {return "white";} else {return "black";} } )
+            .style("stroke-width", function(d) { if (d.className === countryData[0][1]) {return 3;} else {return 0;} } );
+
+        // Show first part of country name in the circle
+        node.append("text")
+            .attr("dy", function(d) {
+                if (d.className.indexOf(" ") !== -1) {
+                    return "-.2em" ;
+                }
+                else {
+                    appendNode = false;
+                    return ".3em" ;
+                };
+            })
+            .attr("font-size", function(d) { return Math.round((Math.sqrt(d.r/4)*4)); })
+            .attr("font-family", "Arial")
+            .attr("font-color", "grey")
+            .attr("text-anchor", "middle")
+            .text(function(d) {
+                if (d.className.indexOf(" ") !== -1) {
+                    return d.className.substring(0, d.className.indexOf(" "));
+                }
+                else {
+                    return d.className;
+                }
+            });
+            
+        // Show second part of country name in the circle when the country name consists of two parts.
+        node.append("text")
+            .attr("dy", ".8em")
+            .attr("font-size", function(d) { return Math.round((Math.sqrt(d.r/4)*4)); })
+            .attr("font-family", "Arial")
+            .attr("font-color", "grey")
+            .attr("text-anchor", "middle")
+            .text(function(d) {
+                if (d.className.indexOf(" ") !== -1) {
+                    return d.className.substring(d.className.indexOf(" "));
+                }
+                else {
+                    return "";
+                }
+            });
+
+        d3.select(self.frameElement).style("height", diameter + "px");
+
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////
+    // CHART ///////////////////////////////////////////////////////////////////
+
+    // Define the chart bar scaling for x
+    var x = d3.scale.linear()
+              .domain([0, 10])
+              .range([0, 100]);
+
+    // Define the chart bar scaling for y
+    var y = d3.scale.linear()
+              .domain([0, 100])
+              .rangeRound([0, height]);
+
+    // Create a chart selection variable to append new svg elements for new data items
+    var chart = d3.select("#charts").append("svg")
+                  .attr("id", "chartDiv1")
+                  .attr("class", "chart")
+                  .attr("width", 420)
+                  .attr("height", height);
+
+    // Create rectangles in the svg elements inside the charts div
+    chart.selectAll("rect")
+         .data(parsedCountryData.slice(2,-1))
+         .enter().append("rect")
+         .attr("x", function(d, i) { return i * 75; })
+         .attr("width", 55)
+         .attr("height", x);
+
+    // Create text on every chart item
+    chart.selectAll("text")
+         .data(parsedCountryData.slice(2,-1))
+         .enter()
+         .append("text")
+         .text(function(d) {return Math.round(d).toString() + "%";} )
+         .attr("x", function(d, i) { return (i * 75) + 15; })
+         .attr("y", 295)
+
+
+    ////////////////////////////////////////////////////////////////////////////
+    // REDRAW ELEMENTS /////////////////////////////////////////////////////////
+
+    // Redraw the deviance, charts and map based on the parsed slider values
+    function redraw() {
+
+        // Update deviance
+        var deviance = Math.round(parsedCountryData[parsedCountryData.length-1]);
+        $("#face").html(deviance + "%");
+
+
+        // Update bar chart
+        var chart = d3.select("#charts");
+        chart.selectAll("rect")
+             .data(parsedCountryData.slice(2,-1))
+             .attr("y", function(x) { return height - (x*3); })
+             .attr("width", 55)
+             .attr("height", x);
+
+        // Update bar chart percentages
+        chart.selectAll("text")
+             .data(parsedCountryData.slice(2,-1))
+             .text(function(d) {return Math.round(d).toString() + "%";} )
+             .attr("x", function(d, i) { return (i * 75) + 15; })
+             .attr("y", 295)
+
+        // Update map
+        updateMap();
+    }
+
+}
+
+
+
+
+</script>
+
+
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+$(function() {
+  $('li > a').click(function() {
+    $('.modal-content')
+      .hide()
+      .filter('.' + $(this).data('modal-content'))
+      .show();
+  });
+
+  $('#handle').click(function() {
+    var isSlideUp = $menu.data('slide')  === 'up';
+    $menu.animate({ top: isSlideUp ? 0 : -menuInnerHeight });
+    $menu.data('slide', isSlideUp ? 'down' : 'up');
+  });
+
+  var $menu = $('#menu');
+  var $handle = $('#handle');
+
+  var menuInnerHeight = $menu.height() - $handle.height();
+
+  $('#menu').offset({ 'top': -menuInnerHeight });
+})
+</script>
+
+</body>
+</html>

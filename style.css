@@ -1,0 +1,88 @@
+body {
+    
+}
+
+#container{
+    width: 1000px;
+    height:auto;
+    border:solid 1px black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#banner {
+    height:200px;
+    border:solid 1px black;
+}
+
+#banner_title {
+    height:150px;
+    width:700px;
+    float:left;
+    border:solid 1px black;
+}
+
+#banner_icons {   
+    height:150px;
+    width:200px;
+    float:right;
+    border:solid 1px black;
+}
+
+#secondline {
+    height:400px;
+    margin-top:10px;
+    border:solid 1px black;
+}
+
+#sliders {
+    border:solid 1px black;
+    width:350px;
+    height:auto;
+    float:left;
+}
+
+#charts {
+    border:solid 1px black;
+    width:440px;
+    margin-left:1px;
+    height:auto;
+    float:left;
+}
+
+#face {
+    border:solid 1px black;
+    width:200px;
+    height:auto;
+    float:right;
+}
+
+#clearer{
+    clear:both;
+}
+
+#thirdline {
+    height:400px;
+    margin-top:10px;
+    border:solid 1px black;
+}
+
+#prompt {
+    border:solid 1px black;
+    width:350px;
+    height:auto;;
+    float:left;
+}
+
+#map {
+    border:solid 1px black;
+    width:400px;
+    height:auto;;
+    float:left;
+}
+
+#key {
+    border:solid 1px black;
+    width:200px;
+    height:auto;;
+    float:right;
